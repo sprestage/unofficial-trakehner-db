@@ -1,0 +1,8 @@
+
+<figure class='horse_image'>
+  <% if @horse.image %>
+    <%= image_tag @horse.image %>
+  <% else %>
+    <%= render 'shared/no_picture_for_horse_image' %>
+  <% end %>
+</figure>

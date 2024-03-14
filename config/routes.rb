@@ -1,6 +1,16 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  get '/contact' => 'static#contact'
+  get '/about' => 'static#about'
+
+  resources :breeders
+
+  resources :horses do
+    member do
+      get 'progeny'
+    end
+  end
+
+  root to: 'home#index'
+
 end

@@ -1,0 +1,12 @@
+<%= simple_form_for(@horse) do |f| %>
+  <%= f.error_notification %>
+  <%= f.input :name, label: "Trakehner Name" %><br>
+  <%= f.input :registration_number %><br>
+  <%= f.input :birth_year, collection: 1925..2025 %><br>
+  <%= f.input :color %><br>
+  <%= f.input :sex, label: "Gender", collection: ["Mare", "Stallion", "Gelding"], as: :radio_buttons %><br>
+  <%= f.association :breeder %><br><br>
+  <%= f.input :image %><br><br>
+  <%= f.error :base %>
+  <%= f.button :submit %><br><br>
+<% end %>

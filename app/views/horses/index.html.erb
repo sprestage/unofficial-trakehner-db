@@ -1,0 +1,14 @@
+<title><%= t "shared.unofficial_trakehner_database" %></title>
+
+<div id="horse_index_header">
+  <h2 class='center'><%= t "horses_index.trakehner_horses" %></h2></p>
+</div>
+
+<%= render 'horses_index_table', {:horses => @horses} %>
+
+<br>
+
+
+<%= paginate @horses %>
+<br>
+<%= link_to 'Home', root_path %>

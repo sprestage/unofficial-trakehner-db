@@ -3,9 +3,9 @@ Rails.application.routes.draw do
   get '/contact' => 'static#contact'
   get '/about' => 'static#about'
 
-  resources :breeders
+  resources :breeders, only: [:index, :show]
 
-  resources :horses do
+  resources :horses, only: [:index, :show] do
     member do
       get 'progeny'
     end

@@ -72,8 +72,8 @@ rails generate migration AddAtaFieldsToHorses registration_number:string gender:
 
 rails generate migration CreateBreeders name:string address:string
 
-RAILS_ENV=development rails s
 rake db:migrate
+RAILS_ENV=development rails s
 
 RAILS_ENV=development bundle exec rake import_stallion_images
 ```

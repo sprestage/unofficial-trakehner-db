@@ -1,0 +1,45 @@
+<title>Trakehner Breeders</title>
+
+<div>
+  <div id="breeder_index_header">
+    <%= render 'shared/website_title' %><br>
+    <h2><%= t 'breeders_index.trakehner_breeder' %></h2>
+  </div>
+</div>
+
+<div>
+  <div id="breeder_index_search">
+    <br><br>
+    <%= render 'layouts/breeder_search' %>
+    <br><br>
+  </div>
+</div>
+
+<style>th{background-color:black; color:white}</style>
+<table border="1">
+  <thead>
+    <tr>
+      <th class="text-center"><%= t('breeders_index.name') %></th>
+      <th class="text-center"><%= t('breeders_index.address') %></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @breeders.each do |breeder| %>
+      <tr id="<%= breeder.id %>">
+        <td><%= link_to breeder.name, breeder %></td>
+        <td><%= breeder.address %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<div>
+  <div class="breeder_index_footer">
+    <%= paginate @breeders %>
+    <br><br>
+    <%= link_to t('sidebar.home'), root_path %>
+  </div>
+</div>

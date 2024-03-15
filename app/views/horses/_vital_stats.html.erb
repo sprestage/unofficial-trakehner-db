@@ -8,25 +8,25 @@
     <table cellpadding="2" width="100%">
       <tbody>
         <tr>
-          <td align='right' width='10%'><%= "Foaled:" %></td>
+          <td align='right' width='10%'><%= t('horses_index.foaled') + ":" %></td>
           <td class="thick" align='left'><%= @horse.birth_year %></td>
           <td></td>
           <td></td>
         </tr>
         <tr>
-          <td align='right' width='10%'><%= "Color:" %></td>
+          <td align='right' width='10%'><%= t('horses_index.color') + ":" %></td>
           <td class="thick" align='left'><%= @horse.color %></td>
           <td></td>
           <td></td>
         </tr>
         <tr>
-          <td valign='top' align='right' width='10%'><%= "Gender:" %></td>
+          <td valign='top' align='right' width='10%'><%= t('horses_index.gender') + ":" %></td>
           <td valign='top' class="thick" align='left'><%= @horse.gender %></td>
           <td></td>
           <td></td>
         </tr>
         <tr>
-          <td valign='top' align='right' width='10%'><%= "Height:" %></td>
+          <td valign='top' align='right' width='10%'><%= t('horses_index.height') + ":" %></td>
           <td class="thick" align='left'>
             <% if mature_height != "" %>
               <%= mature_height %>
@@ -37,13 +37,13 @@
           <td></td>
         </tr>
         <tr>
-          <td valign='top' align='right' width='10%'><%= "Mare family:" %></td>
+          <td valign='top' align='right' width='10%'><%= t('horses_index.mare_family') + ":" %></td>
           <td class="thick" align='left'><%= mare_family %></td>
           <td></td>
           <td></td>
         </tr>
         <tr>
-          <td valign='top' align='right' width='10%'><%= "Breeder:" %></td>
+          <td valign='top' align='right' width='10%'><%= t('horses_index.breeder') + ":" %></td>
           <td class="thick" align='left'>
             <% if @horse.breeder %>
               <%= link_to "#{ @horse.breeder.name }", @horse.breeder %>

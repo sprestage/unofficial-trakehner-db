@@ -117,6 +117,8 @@ RAILS_ENV=development bundle exec rake import_stallion_images
 - [x] Improve i18n on as well as on Home#about and Home#contact Breeders("Search Breeder By Name", "Name", "Address")
 - [x] Re-implement Horse tests
 - [x] Re-implement Breeder tests
+- [x] There is a stallion, Absalon, who looks to be from Germany whose gender is "V".  Figure out the German translations for Stallion, Gelding, and Mare.  Examine data for FRG or ??? in the Breeder name and check gender for these horses, correcting as needed.  NEED TO DO THIS BEFORE POPULATING RENDER!!!  Ah, it appears that V is for Vater (or Sire in English).  I've added to the rake task a bit to change `V` to `S`.
+
 - [ ] Re-implement population of database with horses and breeders from json, locally
 - [ ] check for the bugs mentioned below, locally
 - [ ] port all this to the hacienda-solutions-terraza repository (under new branch!!!)
@@ -125,10 +127,6 @@ RAILS_ENV=development bundle exec rake import_stallion_images
 - [ ] Deploy new UTDB to production with note of explanation that the data is currently 2013 stallions only and what the next steps for the data imports are
 - [ ] Import json data and ATA stallions on Render
 - [ ] Bug with progeny.  Probably due to the need for the ancestry gem to handle the multiple foreign key problem with the progeny of Horse.  See the json files for C and A for the stallion Almox Prints J.  Update: Good news.  Offspring/Progeny is working beautifully.  belongs_to automatically carries the association in the other direction, so a has_many for offspring within the horse model is not needed and has been removed.  The worrisome indicator I saw was only due to not having imported all the json files yet.
-- [ ] There is a stallion, Absalon, who looks to be from Germany whose gender is "V".  Figure out the German translations for Stallion, Gelding, and Mare.  Examine data for FRG or ??? in the Breeder name and check gender for these horses, correcting as needed.  NEED TO DO THIS BEFORE POPULATING RENDER!!!
-
-``"name":"Maharadscha","registration_number":"09/00156/57","sex":"V","color":"gray","birth_year":"","sire":"Famulus","dam":"Marke","dam_sire":"Markvogt","breeder":"","performance_records_available":""},``
-
 - [ ] Import all json data on Render, letter by letter, trying to avoid maxing out the database inserts for the free level of database.  Over 23,000 inserts into database.  Render is not happy and will permit no others, but the site is stable without the need to change the DB (for now).
 - [ ] Need to upgrade from Render's free Hobby-dev database to the $9/month Hobby-basic database.  This should be done when the updated horse json data scraping is performed on the ATA website.
 - [ ] Re-scrape the ATA website to get the new horses.  Probably need to scrape all data, then the rake script will need to check both that the horse/breeder exists and also that any data for that horse/breeder has changed.  If data is unchanged, the save should not be made.

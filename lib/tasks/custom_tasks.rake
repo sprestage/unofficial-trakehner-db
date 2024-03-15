@@ -47,6 +47,8 @@ task :load_scraped_json => :environment do
   end
 end
 
+# RAILS_ENV=development bundle exec rake load_scraped_json_by_letter_input
+# RAILS_ENV=development bundle exec rails "load_scraped_json_by_letter_input[A]"
 task :load_scraped_json_by_letter_input, [:letter] => :environment do |t, args|
   args.with_defaults(:letter => "X")
   puts "Importing json data for horses beginning with the letter '#{args.letter}'."
@@ -59,6 +61,7 @@ task :load_scraped_json_by_letter_input, [:letter] => :environment do |t, args|
   end
 end
 
+# RAILS_ENV=development bundle exec rake import_stallion_images
 task :import_stallion_images  => :environment do
   filename = "app/assets/data/json/ata_2013_approved_stallions.json"
   records = JSON.parse( File.read ( filename ) )

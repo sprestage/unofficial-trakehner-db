@@ -4,7 +4,7 @@ class Horse < ActiveRecord::Base
   # has_many :offspring, class_name: "Horse", foreign_key: :sire_id,
   #                                           foreign_key: :dam_id
 
-  belongs_to :breeder, class_name: "Breeder", foreign_key: :breeder_id
+  belongs_to :breeder, class_name: "Breeder", foreign_key: :breeder_id, optional: true
   belongs_to :sire, class_name: "Horse", foreign_key: :sire_id
   belongs_to :dam, class_name: "Horse", foreign_key: :dam_id
 

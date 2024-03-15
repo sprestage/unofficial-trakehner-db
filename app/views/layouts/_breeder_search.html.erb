@@ -2,6 +2,6 @@
 <%= form_tag breeders_path, method: :get do %>
   <p>
     <%= text_field_tag :search_name, params[:search_name] %>
-    <%= submit_tag "Search Breeder By Name", :name => nil %>
-  </p>
+    <%= submit_tag t('breeders_index.breeder_search'), :name => nil %>
+   </p>
 <% end %>

@@ -4,6 +4,7 @@ class Horse < ActiveRecord::Base
   # has_many :offspring, class_name: "Horse", foreign_key: :sire_id,
   #                                           foreign_key: :dam_id
 
+  belongs_to :breeder, class_name: "Breeder", foreign_key: :breeder_id
   belongs_to :sire, class_name: "Horse", foreign_key: :sire_id
   belongs_to :dam, class_name: "Horse", foreign_key: :dam_id
 
@@ -28,12 +29,12 @@ class Horse < ActiveRecord::Base
 
   alias_method :default_sire, :sire
   def sire
-    return self.default_sire || Horse.new( name: 'Unknown' )
+    return self.default_sire || Horse.new( name: I18n.t('horses_index.unknown') )
   end
 
   alias_method :default_dam, :dam
   def dam
-    return self.default_dam || Horse.new( name: 'Unknown' )
+    return self.default_dam || Horse.new( name: I18n.t('horses_index.unknown') )
   end
 
   def get_progeny
@@ -51,7 +52,7 @@ class Horse < ActiveRecord::Base
     horse = Horse.fetch( record[ "name" ] )
 
     horse.registration_number = record[ "registration_number" ]
-    horse.gender = record[ "sex" ]
+    horse.gender = record["sex"] == "V" ? "S" : record["sex"]
     horse.color = record[ "color" ]
     horse.birth_year = record[ "birth_year" ]
 

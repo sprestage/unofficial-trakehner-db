@@ -30,8 +30,12 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  has_image: "Has Image"
   sidebar:
-    has_image: "Has image"
+    home: "Home"
+    back: "Back"
+    show: "Show"
+    has_image: "Has Image"
     search: "Search"
     horse: "Horse"
     horses: "Horses"
@@ -52,15 +56,23 @@ en:
   horses_index:
     trakehner_name: "Trakehner Name"
     trakehner_horses: "Trakehner Horses"
-    sex: "Sex"
+    gender: "Sex"
     sire: "Sire"
     dam: "Dam"
     color: "Color"
+    year_of_birth: "Foaled"
+    foaled: "Foaled"
+    height: "Height"
+    mare_family: "Mare Family"
+    breeder: "Breeder"
     unknown: "Unknown"
     performance_records_available: "Performance records available"
 
   breeders_index:
     trakehner_breeder: "Trakehner Breeder"
+    name: "Name"
+    address: "Address"
+    breeder_search: "Search Breeder By Name"
 
   shared:
     unofficial_trakehner_database: "The Unofficial Trakehner Database"
@@ -75,6 +87,33 @@ en:
     show_progeny: "Show Progeny"
     no_known_progeny: "No known progeny"
 
+  views:
+    pagination:
+      first: "&laquo; First"
+      last: "Last &raquo;"
+      previous: "&lsaquo; Prev"
+      next: "Next &rsaquo;"
+      truncate: "&hellip;"
+
   static_pages:
-    contact_us: 'Contact Us'
-    about_us: 'About Us'
+    contact: 'Contact'
+    about: 'About'
+    welcome: "Welcome to my site."
+    the_site: "In 2013, I was a trakehner horse breeder from Washington state in
+  the Pacific NorthWestern United States.  I am Susan Prestage, formerly of
+  Tabarah Ranch Trakehners.  I intend this site to be a useful tool
+  for the Trakehner community for researching Trakehner bloodlines.  My hope
+  is that this can be be a helpful contribution to the community.  I in no
+  way wish to trod on any toes or be disrespectful in any way.  If my
+  site or content troubles you or perhaps you would like to contribute
+  additional data or recommendations, I eagerly solicit your views and
+  contributions."
+    the_motivation: "I was inspired to create this site shortly after an ATA inspection
+  I attended in Washington state in 2011.  I was looking to improve a slight
+  weakness in the croup in my mare line and found that I had a hard
+  time researching the stallions and bloodlines to my satisfaction.  Being
+  a web developer in addition to a Trakehner horse breeder, this website was a
+  natural result of this struggle.  I hope using this site gives you as much
+  pleasure as it does me.  Thank you for visiting."
+    the_invitation: "I invite you to visit me at my professional portfolio website as
+    well as the memorial to my old home Trakehner website."

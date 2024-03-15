@@ -1,12 +1,16 @@
 de:
+  has_image: "Hat Bild"
   sidebar:
+    home: "Heimseite"
+    back: "Hinten"
+    show: "Zeigen"
     has_image: "Hat Bild"
     search: "Suche"
     horse: "Pferd"
     horses: "Pferde"
     breeders: "Züchter"
     about: "Über"
-    contact: "Kontact"
+    contact: "Kontakt"
     log_in: "Einloggen"
     sign_out: "Sich Austragen"
 
@@ -21,15 +25,24 @@ de:
   horses_index:
     trakehner_name: "Trakehner Name"
     trakehner_horses: "Trakehner Pferde"
-    sex: "Geschlecht"
+    gender: "Geschlecht"
     sire: "Vater"
     dam: "Muttertier"
     color: "Farbe"
+    year_of_birth: "Geburtsjahr"
+    foaled: "Geburtsjahr"
+    height: "Höhe"
+    mare_family: "Stutenfamilie"
+    breeder: "Züchter"
     unknown: "Unbekannt"
     performance_records_available: "Performance-Aufzeichnungen"
 
   breeders_index:
     trakehner_breeder: "Trakehner Züchter"
+    name: "Name"
+    address: "Adresse"
+    breeder_search: "Suchen Sie den Züchter nach Namen"
+
 
   shared:
     unofficial_trakehner_database: "Der Inoffiziell Trakehner Datenbank"
@@ -41,12 +54,39 @@ de:
 
   pedigree:
     show_pedigree: "Stammbaum Zeigen"
-    show_progeny: "<unfilled German translation>"
-    no_known_progeny: "<unfilled German translation>"
+    show_progeny: "Nachkommen anzeigen"
+    no_known_progeny: "Keine bekannten Nachkommen"
+
+  views:
+    pagination:
+      first: "&laquo; Erste"
+      last: "Zuletzt &raquo;"
+      previous: "&lsaquo; Vorherige"
+      next: "Nächste &rsaquo;"
+      truncate: "&hellip;"
 
   static_pages:
-    contact_us: 'Kontaktieren Sie Uns'
-    about_us: 'Über uns'
+    contact: 'Kontakt'
+    about: 'Über'
+    welcome: "Willkommen auf meiner Seite."
+    the_site: "Im Jahr 2013 war ich Trakehner-Pferdezüchter aus dem Bundesstaat Washington
+   der pazifische Nordwesten der Vereinigten Staaten. Ich bin Susan Prestage, früher von
+   Tabarah Ranch Trakehners. Ich möchte, dass diese Seite ein nützliches Werkzeug ist
+   für die Trakehner-Gemeinschaft zur Erforschung der Trakehner-Blutlinien. Meine Hoffnung
+   ist, dass dies ein hilfreicher Beitrag für die Gemeinschaft sein kann. Ich in Nr
+   Ich möchte Ihnen auf die Füße treten oder in irgendeiner Weise respektlos sein. Wenn mein
+   Die Website oder der Inhalt bereitet Ihnen Probleme oder Sie möchten vielleicht einen Beitrag leisten
+   Für weitere Daten oder Empfehlungen bin ich gerne bereit, Ihre Meinung einzuholen
+   Beiträge."
+    the_motivation: "Ich wurde kurz nach einer ATA-Inspektion dazu inspiriert, diese Seite zu erstellen
+   Ich habe 2011 im Bundesstaat Washington studiert. Ich wollte mich ein wenig verbessern
+   Schwäche in der Kruppe in meiner Stutenlinie und stellte fest, dass ich eine schwere hatte
+   Ich habe viel Zeit damit verbracht, die Hengste und Blutlinien zu meiner Zufriedenheit zu recherchieren. Sein
+   Diese Website war neben einem Webentwickler auch ein Trakehner-Pferdezüchter
+   natürliche Folge dieses Kampfes. Ich hoffe, dass Ihnen die Nutzung dieser Website genauso viel bringt
+   Freude wie es mir bereitet. Danke für Ihren Besuch."
+    the_invitation: "Ich lade Sie ein, mich auf meiner professionellen Portfolio-Website zu besuchen
+     sowie das Denkmal meiner alten Heimat auf der Trakehner-Website."
 
   date:
     abbr_day_names:

@@ -1,0 +1,16 @@
+<title><%= @breeder.name %></title>
+
+<h1>Editing breeder</h1>
+
+<%= render 'form' %>
+
+<div>
+  <div class="breeder_edit_delete_breeder">
+    <% if policy(Breeder).destroy? %>
+      <%= link_to 'Delete Breeder', @breeder, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <% end %>
+  </div>
+</div>
+
+<%= link_to t('sidebar.show'), @breeder %> |
+<%= link_to t('sidebar.back'), breeders_path %>

@@ -144,6 +144,7 @@ RAILS_ENV=development bundle exec rake import_stallion_images
 - [ ] find Trakehner stud books for comparison to see what Trakehner specific data my .json data might be missing  
 - [ ] Fix McGill vs Mcgill.  Consider upcasing.
 - [ ] Add photo credit, see horse Ballzauber, https://unofficialtrakehnerdb.s3-us-west-2.amazonaws.com/ata_approved_stallions/BallzauberPhotoCredit.txt
+- [ ] Add breeder creation to the .json data import.
 - [ ] When a horse sire or dam is Unknown, the name 'Unknown' is not a link.  However, when a breeder name is 'Unknown', it is still displayed as a link, which then brings up every horse whose breeder is unknown. Change the 'Unknown' breeder name to no longer be displayed (or function) as a link.
 - [ ] Re-implement image uploader for Horses.  This is already done.  All images and thumbnails are stored in AWS S3.  When the json is imported into the database, the URLs for images and thumbnails are populated accordingly.    Here is an example thumbnails - https://unofficialtrakehnerdb.s3-us-west-2.amazonaws.com/uploads/horse/image/1001/thumbnail_Martini.jpg *<- 2024-03-13, might be obsolete -susan*
 - [ ] Re-implement fonts *<- 2024-03-13, might be obsolete -susan*

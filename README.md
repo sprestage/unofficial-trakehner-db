@@ -118,25 +118,27 @@ RAILS_ENV=development bundle exec rake import_stallion_images
 - [x] Re-implement Horse tests
 - [x] Re-implement Breeder tests
 - [x] There is a stallion, Absalon, who looks to be from Germany whose gender is "V".  Figure out the German translations for Stallion, Gelding, and Mare.  Examine data for FRG or ??? in the Breeder name and check gender for these horses, correcting as needed.  NEED TO DO THIS BEFORE POPULATING RENDER!!!  Ah, it appears that V is for Vater (or Sire in English).  I've added to the rake task a bit to change `V` to `S`.
+- [x] Re-implement population of database with horses and breeders from json, locally
+- [x] port all this to the hacienda-solutions-terraza repository (under new branch!!!)
+- [x] get the UTDB running again under the Terraza
+- [x] Bug with progeny.  Probably due to the need for the ancestry gem to handle the multiple foreign key problem with the progeny of Horse.  See the json files for C and A for the stallion Almox Prints J.  Update: Good news.  Offspring/Progeny is working beautifully.  belongs_to automatically carries the association in the other direction, so a has_many for offspring within the horse model is not needed and has been removed.  The worrisome indicator I saw was only due to not having imported all the json files yet.
+- [x] NOPE - Need to upgrade from Render's free Hobby-dev database to the $9/month Hobby-basic database.  This should be done when the updated horse json data scraping is performed on the ATA website.  <- Research and calculations show that I'll be will within the limits of my current DB level.  My data just isn't that big, even though I'll need 30-50,000 rows.  Estimate was in the MB and the db is in the GB.
+- [x] NOPE - Re-scrape the ATA website to get the new horses.  Probably need to scrape all data, then the rake script will need to check both that the horse/breeder exists and also that any data for that horse/breeder has changed.  If data is unchanged, the save should not be made.   <-  so it appears that things have changed in the last 10 years and this sort of breeding, genealogical, etc data is no longer publicly available.  I find that sad, but am glad I still have all the data from 2013 and before.  I would like to pull out the Trakehner stud books and see how much I'm missing, so new task for that.
+- [x] Fix location of language toggle.  Should be on far right.  Hmmm.  Fixed on Render (in production), with correct fonts which are all missing locally.  Priority on this is much lower as a result but should be looked into at some point. <- 2024-03-13, might be obsolete -susan  <- yep, this is obsolete.  I've deployed to render and don't see this locally or in production.
+- [x] Remove or comment out all devise and auth-related code related to Breeder model <- 2024-03-13, might be obsolete -susan  <- yep, this is obsolete.  I've been through the code enough to be sure.
 
-- [ ] Re-implement population of database with horses and breeders from json, locally
-- [ ] check for the bugs mentioned below, locally
-- [ ] port all this to the hacienda-solutions-terraza repository (under new branch!!!)
-- [ ] get the UTDB running again under the Terraza
-- [ ] deploy Terraza and get the DB up and running with the stallions data
+- [ ] set up route 53 for unofficialtrakehnerdatabase.com to work correctly
+- [ ] deploy Terraza to render.com with UTDB branch - OMG, it worked out of the box!!
+- [ ] get the DB up and running with the stallions data on render.com
 - [ ] Deploy new UTDB to production with note of explanation that the data is currently 2013 stallions only and what the next steps for the data imports are
-- [ ] Import json data and ATA stallions on Render
-- [ ] Bug with progeny.  Probably due to the need for the ancestry gem to handle the multiple foreign key problem with the progeny of Horse.  See the json files for C and A for the stallion Almox Prints J.  Update: Good news.  Offspring/Progeny is working beautifully.  belongs_to automatically carries the association in the other direction, so a has_many for offspring within the horse model is not needed and has been removed.  The worrisome indicator I saw was only due to not having imported all the json files yet.
+- [ ] Import the ATA stallions on Render
 - [ ] Import all json data on Render, letter by letter, trying to avoid maxing out the database inserts for the free level of database.  Over 23,000 inserts into database.  Render is not happy and will permit no others, but the site is stable without the need to change the DB (for now).
-- [ ] Need to upgrade from Render's free Hobby-dev database to the $9/month Hobby-basic database.  This should be done when the updated horse json data scraping is performed on the ATA website.
-- [ ] Re-scrape the ATA website to get the new horses.  Probably need to scrape all data, then the rake script will need to check both that the horse/breeder exists and also that any data for that horse/breeder has changed.  If data is unchanged, the save should not be made.
+- [ ] find Trakehner stud books for comparison to see what Trakehner specific data my .json data might be missing  
 - [ ] Fix McGill vs Mcgill.  Consider upcasing.
 - [ ] Add photo credit, see horse Ballzauber, https://unofficialtrakehnerdb.s3-us-west-2.amazonaws.com/ata_approved_stallions/BallzauberPhotoCredit.txt
 - [ ] When a horse sire or dam is Unknown, the name 'Unknown' is not a link.  However, when a breeder name is 'Unknown', it is still displayed as a link, which then brings up every horse whose breeder is unknown. Change the 'Unknown' breeder name to no longer be displayed (or function) as a link.
-- [ ] Fix location of language toggle.  Should be on far right.  Hmmm.  Fixed on Render (in production), with correct fonts which are all missing locally.  Priority on this is much lower as a result but should be looked into at some point. *<- 2024-03-13, might be obsolete -susan*
 - [ ] Re-implement image uploader for Horses.  This is already done.  All images and thumbnails are stored in AWS S3.  When the json is imported into the database, the URLs for images and thumbnails are populated accordingly.    Here is an example thumbnails - https://unofficialtrakehnerdb.s3-us-west-2.amazonaws.com/uploads/horse/image/1001/thumbnail_Martini.jpg *<- 2024-03-13, might be obsolete -susan*
 - [ ] Re-implement fonts *<- 2024-03-13, might be obsolete -susan*
-- [ ] Remove or comment out all devise and auth-related code related to Breeder model *<- 2024-03-13, might be obsolete -susan*
 
 
 ### Testing

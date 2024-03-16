@@ -81,8 +81,8 @@ RAILS_ENV=development bundle exec rake import_stallion_images
 
 ### Implementation Tasks
 =======
-#### This list of task was copied over from the old project.  Update as needed.
 
+#### Completed tasks
 - [x] Re-implement basic site
 - [x] Re-add static pages
 - [x] Re-add model for Horses
@@ -126,9 +126,17 @@ RAILS_ENV=development bundle exec rake import_stallion_images
 - [x] NOPE - Re-scrape the ATA website to get the new horses.  Probably need to scrape all data, then the rake script will need to check both that the horse/breeder exists and also that any data for that horse/breeder has changed.  If data is unchanged, the save should not be made.   <-  so it appears that things have changed in the last 10 years and this sort of breeding, genealogical, etc data is no longer publicly available.  I find that sad, but am glad I still have all the data from 2013 and before.  I would like to pull out the Trakehner stud books and see how much I'm missing, so new task for that.
 - [x] Fix location of language toggle.  Should be on far right.  Hmmm.  Fixed on Render (in production), with correct fonts which are all missing locally.  Priority on this is much lower as a result but should be looked into at some point. <- 2024-03-13, might be obsolete -susan  <- yep, this is obsolete.  I've deployed to render and don't see this locally or in production.
 - [x] Remove or comment out all devise and auth-related code related to Breeder model <- 2024-03-13, might be obsolete -susan  <- yep, this is obsolete.  I've been through the code enough to be sure.
+- [x] deploy Terraza to render.com with UTDB branch - OMG, it worked out of the box!!
 
+#### Current task list, 2024-03-15
+- [ ] good news!  I can get to past and present stallions for fresh data,
+  - http://americantrakehner.com/Stallions/app/list_past.asp
+  - https://americantrakehner.com/Stallions/app/list_active.asp
+  - https://americantrakehner.com/Mares/excp_mares.asp?tsearch=em
+  - https://americantrakehner.com/Mares/excp_mares.asp?tsearch=mm
+  - https://americantrakehner.com/Mares/excp_mares.asp?tsearch=pm
+  - https://americantrakehner.com/Mares/excp_mares.asp?tsearch=hrm
 - [ ] set up route 53 for unofficialtrakehnerdatabase.com to work correctly
-- [ ] deploy Terraza to render.com with UTDB branch - OMG, it worked out of the box!!
 - [ ] get the DB up and running with the stallions data on render.com
 - [ ] Deploy new UTDB to production with note of explanation that the data is currently 2013 stallions only and what the next steps for the data imports are
 - [ ] Import the ATA stallions on Render

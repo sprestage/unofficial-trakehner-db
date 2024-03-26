@@ -127,8 +127,13 @@ RAILS_ENV=development bundle exec rake import_stallion_images
 - [x] Fix location of language toggle.  Should be on far right.  Hmmm.  Fixed on Render (in production), with correct fonts which are all missing locally.  Priority on this is much lower as a result but should be looked into at some point. <- 2024-03-13, might be obsolete -susan  <- yep, this is obsolete.  I've deployed to render and don't see this locally or in production.
 - [x] Remove or comment out all devise and auth-related code related to Breeder model <- 2024-03-13, might be obsolete -susan  <- yep, this is obsolete.  I've been through the code enough to be sure.
 - [x] deploy Terraza to render.com with UTDB branch - OMG, it worked out of the box!!
+- [x] set up route 53 for unofficialtrakehnerdatabase.com to work correctly
+- [x] get the DB up and running with the stallions data on render.com
+- [x] Import the ATA stallions on Render
+- [x] Import all json data on Render, letter by letter, trying to avoid maxing out the database inserts for the free level of database.  Over 23,000 inserts into database.  Render is not happy and will permit no others, but the site is stable without the need to change the DB (for now).
 
-#### Current task list, 2024-03-15
+
+#### Current task list, 2024-03-26
 - [ ] good news!  I can get to past and present stallions for fresh data,
   - http://americantrakehner.com/Stallions/app/list_past.asp
   - https://americantrakehner.com/Stallions/app/list_active.asp
@@ -136,18 +141,12 @@ RAILS_ENV=development bundle exec rake import_stallion_images
   - https://americantrakehner.com/Mares/excp_mares.asp?tsearch=mm
   - https://americantrakehner.com/Mares/excp_mares.asp?tsearch=pm
   - https://americantrakehner.com/Mares/excp_mares.asp?tsearch=hrm
-- [ ] set up route 53 for unofficialtrakehnerdatabase.com to work correctly
-- [ ] get the DB up and running with the stallions data on render.com
 - [ ] Deploy new UTDB to production with note of explanation that the data is currently 2013 stallions only and what the next steps for the data imports are
-- [ ] Import the ATA stallions on Render
-- [ ] Import all json data on Render, letter by letter, trying to avoid maxing out the database inserts for the free level of database.  Over 23,000 inserts into database.  Render is not happy and will permit no others, but the site is stable without the need to change the DB (for now).
 - [ ] find Trakehner stud books for comparison to see what Trakehner specific data my .json data might be missing  
-- [ ] Fix McGill vs Mcgill.  Consider upcasing.
 - [ ] Add photo credit, see horse Ballzauber, https://unofficialtrakehnerdb.s3-us-west-2.amazonaws.com/ata_approved_stallions/BallzauberPhotoCredit.txt
 - [ ] Add breeder creation to the .json data import.
 - [ ] When a horse sire or dam is Unknown, the name 'Unknown' is not a link.  However, when a breeder name is 'Unknown', it is still displayed as a link, which then brings up every horse whose breeder is unknown. Change the 'Unknown' breeder name to no longer be displayed (or function) as a link.
-- [ ] Re-implement image uploader for Horses.  This is already done.  All images and thumbnails are stored in AWS S3.  When the json is imported into the database, the URLs for images and thumbnails are populated accordingly.    Here is an example thumbnails - https://unofficialtrakehnerdb.s3-us-west-2.amazonaws.com/uploads/horse/image/1001/thumbnail_Martini.jpg *<- 2024-03-13, might be obsolete -susan*
-- [ ] Re-implement fonts *<- 2024-03-13, might be obsolete -susan*
+
 
 
 ### Testing

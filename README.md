@@ -131,6 +131,7 @@ RAILS_ENV=development bundle exec rake import_stallion_images
 - [x] get the DB up and running with the stallions data on render.com
 - [x] Import the ATA stallions on Render
 - [x] Import all json data on Render, letter by letter, trying to avoid maxing out the database inserts for the free level of database.  Over 23,000 inserts into database.  Render is not happy and will permit no others, but the site is stable without the need to change the DB (for now).
+- [x] Deploy new UTDB to production with note of explanation that the data is currently 2013 stallions only and what the next steps for the data imports are
 
 
 #### Current task list, 2024-03-26
@@ -141,7 +142,6 @@ RAILS_ENV=development bundle exec rake import_stallion_images
   - https://americantrakehner.com/Mares/excp_mares.asp?tsearch=mm
   - https://americantrakehner.com/Mares/excp_mares.asp?tsearch=pm
   - https://americantrakehner.com/Mares/excp_mares.asp?tsearch=hrm
-- [ ] Deploy new UTDB to production with note of explanation that the data is currently 2013 stallions only and what the next steps for the data imports are
 - [ ] find Trakehner stud books for comparison to see what Trakehner specific data my .json data might be missing  
 - [ ] Add photo credit, see horse Ballzauber, https://unofficialtrakehnerdb.s3-us-west-2.amazonaws.com/ata_approved_stallions/BallzauberPhotoCredit.txt
 - [ ] Add breeder creation to the .json data import.

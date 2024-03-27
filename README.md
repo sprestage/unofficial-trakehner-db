@@ -152,7 +152,7 @@ RAILS_ENV=development bundle exec rake import_stallion_images
 ### Testing
 =======
 
-ere is how to run the rails 7.0.8 built in minitest to run the test.  Some of these are legacy commands, some are modern.  With the `minitest-reporters` gem, they all run the same, other than specifying a given folder or file.  I like the old `rake test TEST=...` style better because you can specify a folder alone, without a `*`.
+Here is how to run the rails 7.0.8 built in minitest to run the test.  Some of these are legacy commands, some are modern.  With the `minitest-reporters` gem, they all run the same, other than specifying a given folder or file.  I like the old `rake test TEST=...` style better because you can specify a folder alone, without a `*`.
 ```
 rake test
 rake test TESTOPTS="--verbose"
